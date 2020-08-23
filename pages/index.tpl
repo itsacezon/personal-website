@@ -49,4 +49,14 @@
       {% endfor %}
     </div>
   </div>
+
+  <div class="section__wrapper">
+    <div class="content__wrapper">
+      <div class="rhombus-container">
+        <a href="https://spacetrip.acezoncay.me" target="blank">
+          <div class="rhombus"></div>
+        </a>
+      </div>
+    </div>
+  </div>
 {% endblock %}
