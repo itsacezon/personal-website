@@ -1,0 +1,84 @@
+.case__header {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 -6px 4px rgba(0, 0, 0, .02);
+
+  @include media("<=tablet") {
+    height: 240px;
+    background-size: contain;
+  }
+  @include media(">tablet") {
+    height: 600px;
+  }
+
+  .home__link {
+    color: rgba(white, 0.75);
+
+    &:hover {
+      color: #56CCDF;
+    }
+  }
+  .home__title {
+    color: rgba(white, 0.75);
+
+    &:hover {
+      color: rgba(white, 0.75);
+    }
+  }
+}
+.case--student-assembly {
+  background-color: #dc267f;
+  background-image: url('/assets/img/student-assembly-header.png'),
+                    linear-gradient( 135deg, #dc267f 0%, #8C1BAB 100% );
+
+  @include media("<=tablet") {
+    background-position: center bottom;
+  }
+}
+.case--the-azkals {
+  background-color: #FAEC33; // #032876;
+  background-image: url('/assets/img/the-azkals-header.png');
+}
+.case--juanderapp {
+  background-color: #1D56FB; // #4385F5;
+  background-image: url('/assets/img/juanderapp-header.png');
+}
+.case--entropy-resins {
+  background-color: #73F39F; // #9FD453;
+  background-image: url('/assets/img/entropy-resins-header.png'),
+                    linear-gradient( 135deg, #73F39F 0%, #34bc6e 100% );
+}
+
+.case__title {
+  margin-top: 24px;
+
+  span {
+    position: relative;
+  }
+  span::after {
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    z-index: -1;
+
+    height: 24px;
+    width: 24px;
+    background-color: #E34B86;
+    border-radius: 50%;
+    content: '';
+  }
+}
+.case__image {
+  text-align: center;
+
+  img {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+
+    @include media("<=tablet") {
+      margin: 12px;
+    }
+    @include media(">tablet") {
+      margin: 12px 18px;
+    }
+  }
+}
