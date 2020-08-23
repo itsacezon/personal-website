@@ -1,0 +1,27 @@
+{
+  "name": "personal-website",
+  "version": "2.0.0",
+  "description": "Acezon Cay's personal website",
+  "scripts": {
+    "build:html": "nunjucks \"**/*.tpl\" \"./data.json\" -p \"./pages\" -o \"./public\"",
+    "prebuild:css": "node-sass \"./scss/site.scss\" \"./public/assets/css/site.css\"",
+    "build:css": "postcss \"./public/assets/css/site.css\" --replace --use autoprefixer --no-map -b \"last 2 versions\"",
+    "postbuild:css": "postcss \"./public/assets/css/site.css\" --replace --use cssnano --no-map",
+    "build": "npm run build:html && npm run build:css",
+    "serve": "http-server"
+  },
+  "author": "Acezon Cay (hello@acezoncay.me)",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^4.1.1",
+    "http-server": "^0.12.3",
+    "include-media": "^1.4.4",
+    "node-sass": "^4.14.1",
+    "normalize.css": "^4.1.1",
+    "nunjucks": "^3.2.2",
+    "nunjucks-cli": "^1.0.0",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1"
+  },
+  "dependencies": {}
+}
